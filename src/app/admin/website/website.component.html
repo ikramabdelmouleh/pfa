@@ -1,0 +1,49 @@
+<button class="btn btn-primary btn-sm" (click)="openWebsiteDialog()">
+  <i class="fas fa-plus-circle mr-1" style="color: #1a2dd6;"></i> <!-- Icône Plus Circle -->
+  Add WebSite
+</button>
+<br/>
+<table class="table" >
+
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>URL</th>
+      <th>Selecteurs</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngFor="let website of websitesWithSelectors">
+      <tr>
+        <td>{{ website.name }}</td>
+        <td><a [href]="website.url" target="_blank">{{ website.url }}</a></td>
+        <td>
+          <ul *ngIf="website.selectors && website.selectors.length > 0">
+            <li *ngFor="let selector of website.selectors">
+              <ul>
+                <ng-container *ngFor="let entry of getObjectEntries(selector)">
+                  <li>{{ entry[0] }}: {{ entry[1] }}</li>
+                </ng-container>
+              </ul>
+            </li>
+          </ul>
+          <span *ngIf="!website.selectors || website.selectors.length === 0">No selectors found</span>
+        </td>
+        <td>
+          <button class="btn btn-warning btn-sm mr-9" (click)="editWebsite(website)">
+            <i class="fas fa-edit mr-1"></i> <!-- Icône Edit avec marge à droite -->
+
+          </button>
+          &nbsp; <!-- Espace non sécable -->
+
+          <button class="btn btn-danger btn-sm mr-9" (click)="deleteWebsite(website.id)">
+            <i class="fas fa-trash-alt mr-1"></i> <!-- Icône Delete avec marge à droite -->
+
+          </button>
+        </td>
+
+      </tr>
+    </ng-container>
+  </tbody>
+</table>

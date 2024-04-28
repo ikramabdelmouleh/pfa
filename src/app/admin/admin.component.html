@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+            <a href="" class="text-decoration-none">
+                <img src="../../assets/img/Product Advisor.png" alt="Votre Image" class="img-fluid" width="500" height="1000">
+            </a>
+    
+        <ul class="side-menu">
+          <!-- <li><a routerLink="/admin/dashboard"><i class='bx bxs-dashboard'></i>Dashboard</a></li> -->
+          <li><a routerLink="/website"><i class='bx bx-link'></i>Website</a></li>
+        <li>
+            <a href="#" class="logout" (click)="logout()">
+                <i class='bx bx-log-out-circle'></i>
+                Logout
+            </a>
+        </li>
+    </ul>
+
+    </div>
+
+    <div class="content">
+        <nav>
+      
+            <input type="checkbox" id="theme-toggle" hidden>
+            <a href="#" class="notif">
+                <i class='bx bx-bell'></i>
+                <span class="count">1</span>
+            </a>
+            <li><a routerLink="/ecommerce"><i class='bx bx-store'></i></a></li>
+
+            <a href="#" class="profile">
+                <i class="bx bx-user-circle"></i>
+            </a>
+            <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">My Account</button>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <button class="logout" (click)="logout()">log out</button>
+                    <button class="dropdown-item" type="button">Sign up</button>
+                </div>
+            </div>
+            
+        </nav>
+
+        <main>
+          <div class="header">
+
+            <div class="left">
+              <h1>Configuration</h1>
+
+ 
+            </div>
+        </div>
+
+        <router-outlet></router-outlet>
+
+
+            <!-- <div class="bottom-data">
+                <div class="orders">
+                    <div class="header">
+                        <i class='bx bx-receipt'></i>
+                        <h3>Recent Orders</h3>
+                        <i class='bx bx-filter'></i>
+                        <i class='bx bx-search'></i>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Order Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="../../assets/images/profile-1.jpg">
+                                    <p>John Doe</p>
+                                </td>
+                                <td>14-08-2023</td>
+                                <td><span class="status completed">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="../../assets/images/profile-1.jpg">
+                                    <p>John Doe</p>
+                                </td>
+                                <td>14-08-2023</td>
+                                <td><span class="status pending">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="../../assets/images/profile-1.jpg">
+                                    <p>John Doe</p>
+                                </td>
+                                <td>14-08-2023</td>
+                                <td><span class="status process">Processing</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="reminders">
+                    <div class="header">
+                        <i class='bx bx-note'></i>
+                        <h3>Remiders</h3>
+                        <i class='bx bx-filter'></i>
+                        <i class='bx bx-plus'></i>
+                    </div>
+                    <ul class="task-list">
+                        <li class="completed">
+                            <div class="task-title">
+                                <i class='bx bx-check-circle'></i>
+                                <p>Start Our Meeting</p>
+                            </div>
+                            <i class='bx bx-dots-vertical-rounded'></i>
+                        </li>
+                        <li class="completed">
+                            <div class="task-title">
+                                <i class='bx bx-check-circle'></i>
+                                <p>Analyse Our Site</p>
+                            </div>
+                            <i class='bx bx-dots-vertical-rounded'></i>
+                        </li>
+                        <li class="not-completed">
+                            <div class="task-title">
+                                <i class='bx bx-x-circle'></i>
+                                <p>Play Footbal</p>
+                            </div>
+                            <i class='bx bx-dots-vertical-rounded'></i>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>  -->
+
+        </main>
+
+    </div>
+
+    <script src="index.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

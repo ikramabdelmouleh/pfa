@@ -1,0 +1,55 @@
+<section class="vh-100" style="background-color: #e8e8e8;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-6">
+        <div class="card" style="border-radius: 1rem;">
+          <div class="row g-0">
+            <div class="col-md-6 col-lg-5 d-none d-md-block" style="margin-right: -205px; margin-top: 110px;">
+          </div>
+          
+            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+              <div class="card-body p-4 p-lg-5 text-black">
+
+                <form (ngSubmit)="login()">
+
+                  <div class="d-flex align-items-center justify-content-center mb-3 pb-1">
+                    <a href="" class="text-decoration-none">
+                        <span class="h1 text-uppercase text-primary bg-dark px-2">Product</span>
+                        <span class="h1 text-uppercase text-dark bg-primary px-2 ml-n1">Advisor</span>
+                    </a>
+                </div>
+                
+                
+
+                <div data-mdb-input-init class="form-outline mb-10 text-center">
+                  <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 3px;">Sign into your account</h5>
+                </div>
+
+                    <input type="email" id="form2Example17" class="form-control form-control-lg" [(ngModel)]="email"/>
+                    <label class="form-label" for="form2Example17">Email address</label>
+                
+
+                  <div data-mdb-input-init class="form-outline mb-4">
+                    <input type="password" id="form2Example27" class="form-control form-control-lg" [(ngModel)]="password"/>
+                    <label class="form-label" for="form2Example27">Password</label>
+                  </div>
+
+                  <div class="pt-1 mb-4">
+                    <button data-mdb-button-init data-mdb-ripple-init class="btn btn-dark btn-lg btn-block" type="submit">Login</button>
+                  </div>
+
+                  <a class="small text-muted" href="#!">Forgot password?</a>
+                  <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? <a href="#!"
+                      style="color: #393f81;">Register here</a></p>
+                  <a href="#!" class="small text-muted">Terms of use.</a>
+                  <a href="#!" class="small text-muted">Privacy policy</a>
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
